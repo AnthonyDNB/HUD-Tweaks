@@ -1,8 +1,20 @@
 <GUIItems>
 
-<!--
-HUD_Troop_Profiles
+<!-
+
+	X HUDT_Reset_Button_while_playing -
+	X HUDT_hide_hud_button_in_replay -
+	X HUD_Human_Tooltip -
+	  #TeamColorMarker -ND
+	  HUD_Troop_Profiles - ND
+	X #ScenarioInfo
+
+
+
+
+
 -->
+
 <Item name="#HUD_Deploy" origin="0 -650" align="sv" hidden="true">
 	<Item name="HUD_Paused">
 		<Button origin="0 0" tooltip="@menu_deploy_go_ttip">
@@ -36,16 +48,16 @@ HUD_Troop_Profiles
 		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="ffa203"/>
 		<StaticText origin="200 60" text="@menu_hud_planning" font="header_4" textColor="ffa203"/>
 
-		<Button origin="-200 0" tooltip="@menu_hud_resetplans_ttip">
-			<RenderObject2D texture="data/textures/hud/reset_plan_normal.dds"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-			</OnHover>
-			<OnClick>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-				<Action type="TriggerEvent" target="GUI_GAME_HUD_RESET_PLANS"/>
-			</OnClick>
-		</Button>
+		<Button name="HUDT_Reset_Button_while_playing" origin="-200 0" tooltip="@menu_hud_resetplans_ttip">
+				<RenderObject2D texture="data/textures/hud/reset_plan_normal.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_HUD_RESET_PLANS"/>
+				</OnClick>
+			</Button>
 	</Button>
 
 	<Button origin="-200 0" name="HUD_Paused" tooltip="@menu_hud_resume">
@@ -63,16 +75,6 @@ HUD_Troop_Profiles
 		</StaticImage>
 
 		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="ffa203"/>
-		<Button origin="-200 0" tooltip="@menu_hud_resetplans_ttip">
-			<RenderObject2D texture="data/textures/hud/reset_plan_normal.dds"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-			</OnHover>
-			<OnClick>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-				<Action type="TriggerEvent" target="GUI_GAME_HUD_RESET_PLANS"/>
-			</OnClick>
-		</Button>
 	</Button>
 
 	<Button name="HUD_Playing" origin="-200 0" tooltip="@menu_hud_pause">
@@ -90,20 +92,9 @@ HUD_Troop_Profiles
 		</StaticImage>
 
 		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="bbebff"/>
-
-		<Button origin="-200 0" tooltip="@menu_hud_resetplans_ttip">
-			<RenderObject2D texture="data/textures/hud/reset_plan_normal.dds"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-			</OnHover>
-			<OnClick>
-				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
-				<Action type="TriggerEvent" target="GUI_GAME_HUD_RESET_PLANS"/>
-			</OnClick>
-		</Button>
 	</Button>
 
-	<Item name="HUD_NVG" origin="300 0" align="sh">
+	<Item name="HUD_NVG" origin="300 0">
 		<Button name="HUD_NVG_ON" tooltip="@menu_hud_nvg_off">
 			<RenderObject2D texture="data/textures/hud/toggle_nvg_off_normal.dds"/>
 			<OnHover>
@@ -130,7 +121,7 @@ HUD_Troop_Profiles
 		</Button>
 	</Item>
 
-	<Item name="HUD_SUSSY" origin="400 0" align="sh">
+	<Item name="HUD_SUSSY" origin="400 0">
 		<Button name="HUD_SUSSY_ON" tooltip="@menu_hud_sussy_on">
 			<RenderObject2D texture="data/textures/hud/toggle_sussy_on_normal.dds"/>
 			<OnHover>
@@ -170,19 +161,6 @@ HUD_Troop_Profiles
 		</Button>
 	</Item>
 
-	<Item origin="600 0">
-		<Button tooltip="test">
-			<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/hud/menu_hover.dds"/>
-			</OnHover>
-			<OnClick>
-				<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
-				<Action type="TriggerEvent" target="GUI_GAME_WORKSHOP_RANDOM_MISSION"/>
-			</OnClick>
-		</Button>
-	</Item>
-
 	<Item name="HUD_GoCodes" origin="900 0" align="sh">
 		<StaticImage origin="80 0">
 			<RenderObject2D texture="data/textures/hud/go_a_transp.dds"/>
@@ -203,12 +181,15 @@ HUD_Troop_Profiles
 				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
 			</StaticImage>
 
-			<StaticImage origin="0 0" name="#auto_on" align="t" hidden="true">
-				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" sizeX="32" sizeY="32">
-					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="-1"/>
-				</RenderObject2D>
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
 			</StaticImage>
 
+			<StaticImage origin="-75 0" name="#gocode_go_text" align="c">
+				<RenderObject2D texture="data/textures/hud/go_shadow.dds" scaleX="1.4" scaleY="1.05" color="ffffffcc"/>
+				<StaticText origin="-25 0" text="@menu_hud_gocode_go" align="r" font="header_3" fontAutoDownsize="true" textColor="f0e3cc"/>
+			</StaticImage>
 		</Button>
 
 		<StaticImage origin="140 0">
@@ -230,10 +211,9 @@ HUD_Troop_Profiles
 				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
 			</StaticImage>
 
-			<StaticImage origin="0 0" name="#auto_on" align="t" hidden="true">
-				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" sizeX="32" sizeY="32">
-					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="-1"/>
-				</RenderObject2D>
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
 			</StaticImage>
 		</Button>
 
@@ -256,10 +236,9 @@ HUD_Troop_Profiles
 				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
 			</StaticImage>
 
-			<StaticImage origin="0 0" name="#auto_on" align="t" hidden="true">
-				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" sizeX="32" sizeY="32">
-					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="-1"/>
-				</RenderObject2D>
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
 			</StaticImage>
 		</Button>
 
@@ -282,33 +261,29 @@ HUD_Troop_Profiles
 				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
 			</StaticImage>
 
-			<StaticImage origin="0 0" name="#auto_on" align="t" hidden="true">
-				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" sizeX="32" sizeY="32">
-					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="-1"/>
-				</RenderObject2D>
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
 			</StaticImage>
 		</Button>
-
-		<StaticImage origin="20 0">
-			<RenderObject2D texture="data/textures/hud/go_code_text.dds"/>
-		</StaticImage>
 	</Item>
 
-	<Item name="HUD_Sniper" origin="-1140 0" align="sh">
-		<StaticImage>
-			<RenderObject2D texture="data/textures/hud/sniper_text.dds"/>
+	<Item name="HUD_Sniper" origin="-1000 0" sizeX="360" align="sh">
+		<StaticImage origin="-15 0" align="l">
+			<RenderObject2D texture="data/textures/hud/sniper_text_shadow.dds" color="ffffffcc"/>
 		</StaticImage>
-
-		<Button name="HUD_SniperFire" origin="180 0" tooltip="@menu_hud_sniperfire_ttip">
-			<RenderObject2D texture="data/textures/hud/sniper_normal.dds"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/hud/sniper_hover.dds"/>
-			</OnHover>
-			<OnClick>
+		<StaticText text="@menu_hud_sniper_support" align="l" font="header_3" fontAutoDownsize="true" textColor="f0e3cc">
+			<Button origin="120 0" align="r" tooltip="@menu_hud_sniperfire_ttip">
 				<RenderObject2D texture="data/textures/hud/sniper_normal.dds"/>
-				<Action type="TriggerEvent" target="GUI_GAME_HUD_SNIPER"/>
-			</OnClick>
-		</Button>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/sniper_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/sniper_normal.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_HUD_SNIPER"/>
+				</OnClick>
+			</Button>
+		</StaticText>
 	</Item>
 </Item>
 
@@ -319,7 +294,7 @@ HUD_Troop_Profiles
 	</OnOpen>
 
 	<Button name="HUD_Replay_Hidden" origin="1206 0" align="sh" tooltip="@menu_hud_rpl_show">
-	<RenderObject2D texture="data/textures/gui/square.tga" sizeX="135" sizeY="135" color="40392b100"/>
+		<RenderObject2D name="HUDT_hide_hud_button_in_replay" texture="data/textures/gui/square.tga" sizeX="135" sizeY="135" color="40392b100"/>
 		<OnHover>
 			<RenderObject2D texture="data/textures/hud/replay/hide_hud_hover.dds" flipY="true"/>
 		</OnHover>
@@ -851,6 +826,9 @@ HUD_Troop_Profiles
 	<OnCursorDown>
 		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SELECT"/>
 	</OnCursorDown>
+	<OnRClickDown>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_OPEN_WAYPOINTS_MENU"/>
+	</OnRClickDown>
 	<OnScrollDown>
 		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="1"/>
 	</OnScrollDown>
@@ -909,8 +887,6 @@ HUD_Troop_Profiles
 		<StaticImage name="#RankIcon" origin="-6 0" align="r">
 			<RenderObject2D texture="data/textures/gui/customization/trooper_rank_01.dds" scaleX="0.4" scaleY="0.4"/>
 		</StaticImage>
-		<!-- NOTE: This origin is relative to the edge of the RankIcon above -->
-		<StaticText name="#Name" origin="-6 0" text="Pintea Haiducul" align="r" font="paragraph_3" textColor="efe2ca"/>
 	</StaticImage>
 
 
@@ -990,8 +966,8 @@ HUD_Troop_Profiles
 				<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds"  sizeX="84" sizeY="84" color="efe2ca1f" />
 			</StaticImage>
 
-			<StaticImage name="#Progress" origin="0 0" align="">
-				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" scaleX=".70" scaleY=".70" blendMode="normal">
+			<StaticImage name="#Progress" origin="0 0" align="" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" scaleX=".73" scaleY=".73" blendMode="add">
 					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="0"/>
 				</RenderObject2D>
 				<!-- <StaticImage> -->
@@ -1008,51 +984,21 @@ HUD_Troop_Profiles
 
 	</StaticImage>
 
+	<!-- NOTE: This origin is relative to the edge of the RankIcon above -->
+	<StaticText name="#Name" origin="-6 2" text="Pintea Haiducul" align="rt" font="header_5" textColor="efe2ca"/>
+
 	<StaticImage name="#ClassIcon" origin="0 0" align="lb">
 		<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
 	</StaticImage>
 
 </Item>
 
-<!-- unused for now
-<StaticImage name="#ScenarioInfo_DescriptionPopup" origin="0 0" hidden="true">
-	<OnOpen>
-		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
-		<Action type="SetForeground" target="this"/>
-	</OnOpen>
-
-	<OnClose>
-		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
-	</OnClose>
-
-	<OnKeyDown key0="27">
-		<Action type="Hide" target="this"/>
-	</OnKeyDown>
-
-	<RenderObject2D texture="data/textures/gui/menu_pause_black.tga" color="fffffff9" sizeX="9999" sizeY="9999"/>
-
-	<StaticText name="#text" origin="0 0" align="l" text="Test" font="paragraph_1" textColor="f0e3cc">
-		<Button origin="0 -40" align="lb">
-			<ButtonText align="l" origin="20 0" text="@menu_generic_ok" font="header_2" textColor="f0e3cc"/>
-			<OnHover>
-				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc"/>
-				<ButtonText align="l" origin="20 0" text="@menu_generic_ok" font="header_2" textColor="40392b"/>
-			</OnHover>
-			<OnClick>
-				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="0c0b0b80"/>
-				<Action type="Hide" target="#ScenarioInfo_DescriptionPopup"/>
-			</OnClick>
-		</Button>
-	</StaticText>
-</StaticImage>
--->
-
 <!-- Trooper profile list -->
 <Item name="HUD_Troop_Profiles" align="lt" origin="210 0" hidden="true">
 	<Item name="#Item" origin="0 -88" ignoreFocus="true" hidden="true" >
 	</Item>
 
-	<Item name="#Container" origin="0 -40" >
+	<Item name="#Container" origin="0 -45" >
 		<OnOpen>
 			<Action type="Show" target="#ToggleOff"/>
 			<Action type="Hide" target="#ToggleOn"/>
@@ -1072,7 +1018,7 @@ HUD_Troop_Profiles
 
 	<!-- color hints -->
 	<StaticText name="#QuantityDefault" hidden="true" textColor="efe2ca" />
-	<StaticText name="#QuantityBad" hidden="true" textColor="b50d21" />
+	<StaticText name="#QuantityBad" hidden="true" textColor="f01e00" />
 
 	<OnScrollDown>
 		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="1"/>
@@ -1086,7 +1032,7 @@ HUD_Troop_Profiles
 		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="306" sizeY="32" color="0c0b0b"/>
 	</StaticImage>
 	-->
-	<Button name="#ToggleOn" origin="0 -30" align="t" hidden="true" sizeX="128" tooltip="@menu_hud_trooplist_show">
+	<Button name="#ToggleOn" origin="0 -35" align="t" hidden="true" sizeX="128" tooltip="@menu_hud_trooplist_show">
 		<RenderObject2D texture="data/textures/hud/hud_trooperlist.dds"  color="ffffffc8" />
 		<OnHover>
 			<RenderObject2D texture="data/textures/hud/hud_trooperlist_hover.dds"  />
@@ -1095,7 +1041,7 @@ HUD_Troop_Profiles
 			<Action type="Show" target="#Container"/>
 		</OnClick>
 	</Button>
-	<Button name="#ToggleOff" origin="0 -30" align="t" sizeX="128" tooltip="@menu_hud_trooplist_hide">
+	<Button name="#ToggleOff" origin="0 -35" align="t" sizeX="128" tooltip="@menu_hud_trooplist_hide">
 		<RenderObject2D texture="data/textures/hud/hud_trooperlist.dds" color="ffffffc8" flipY="true" />
 		<OnHover>
 			<RenderObject2D texture="data/textures/hud/hud_trooperlist_hover.dds" flipY="true"/>
@@ -1286,6 +1232,24 @@ HUD_Troop_Profiles
 		<RenderObject2D texture="data/textures/gui/customization/info_normal.tga" color="ffffffc8"/>
 		<OnHover>
 			<RenderObject2D texture="data/textures/gui/customization/info_hover.tga"/>
+			<!-- <Action type="Show" target="#scenario_extra_info"/> -->
+		</OnHover>
+
+		<!--
+		<OnHoverEnd>
+			<Action type="Hide" target="#scenario_extra_info"/>
+		</OnHoverEnd>
+		-->
+		<OnClick>
+			<Action type="TriggerEvent" target="GUI_GAME_TOOGLE_BRIEFING"/>
+		</OnClick>
+	</Button>
+</Item>
+
+	<Button name="#scenario_extra_info_button" origin="35 -34" align="lt" tooltip="@menu_m_briefing_toggle">
+		<RenderObject2D texture="data/textures/gui/customization/info_normal.tga" color="ffffffc8" scaleX="1.1" scaleY="1.1"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/customization/info_hover.tga" scaleX="1.1" scaleY="1.1"/>
 			<!-- <Action type="Show" target="#scenario_extra_info"/> -->
 		</OnHover>
 
