@@ -2,12 +2,12 @@
 
 <!-
 
-	X HUDT_Reset_Button_while_playing -
-	X HUDT_hide_hud_button_in_replay -
-	X HUD_Human_Tooltip -
-	  #TeamColorMarker -ND
-	  HUD_Troop_Profiles - ND
-	X #ScenarioInfo
+	HUDT_Reset_Button_while_playing -
+	HUDT_hide_hud_button_in_replay -
+	HUD_Human_Tooltip -
+	#TeamColorMarker -ND
+	HUD_Troop_Profiles - ND
+	#ScenarioInfo
 
 
 
@@ -1232,24 +1232,6 @@
 		<RenderObject2D texture="data/textures/gui/customization/info_normal.tga" color="ffffffc8"/>
 		<OnHover>
 			<RenderObject2D texture="data/textures/gui/customization/info_hover.tga"/>
-			<!-- <Action type="Show" target="#scenario_extra_info"/> -->
-		</OnHover>
-
-		<!--
-		<OnHoverEnd>
-			<Action type="Hide" target="#scenario_extra_info"/>
-		</OnHoverEnd>
-		-->
-		<OnClick>
-			<Action type="TriggerEvent" target="GUI_GAME_TOOGLE_BRIEFING"/>
-		</OnClick>
-	</Button>
-</Item>
-
-	<Button name="#scenario_extra_info_button" origin="35 -34" align="lt" tooltip="@menu_m_briefing_toggle">
-		<RenderObject2D texture="data/textures/gui/customization/info_normal.tga" color="ffffffc8" scaleX="1.1" scaleY="1.1"/>
-		<OnHover>
-			<RenderObject2D texture="data/textures/gui/customization/info_hover.tga" scaleX="1.1" scaleY="1.1"/>
 			<!-- <Action type="Show" target="#scenario_extra_info"/> -->
 		</OnHover>
 
