@@ -1,0 +1,192 @@
+v1.4.1 (Patch 1) - XXXX
+-Added BH Trooper Upgrades for CAG
+-Added the "Ares" editor tag for the Ares Units
+-Adjusted and corrected various localization texts
+-Fixed Rangers 1st rifle squad grenadiers not having access for the M4 BLOCK 1
+
+v1.4.0 - 5 Aug 2025
+-Added Doctrines to CAG
+-Added M995 52gr AP round to SF
+-Added Next Gen Patagonia uniform to the rangers
+-Added Power Saw to CAG's Breachers
+-Removed the M107 for SF (might be reincorporated later on after a rework)
+
+v1.3.3 (Patch 3) - 30 Mar 2025
+-Commandos officers now have the alt swat voice
+-Commandos Level 3 tan LBT and MBAV vests now have Level 4 AP
+-Reverted the LVAW change, all CAG operators will have access to the LVAW now
+-Added ATU helmet to the Commandos
+-Added the Basic Language doctrine to CAG's ISA operators
+-CAG's ISA concealment tweaks
+-Airstrikes tweaks
+-Rocket launchers tweaks
+-Removed CTAC related items form normal SF
+-Fixed Tango9 Scope not showing for the 14" SF URGI
+-Fixed missing local tags on various items
+-Fixed the Medkit video not showing for Medkit items
+-Fixed Medkit items not healing troopers sometimes
+-Fixed incorrect name conventions for the Commandos vests
+-Fixed CAG's ISA Man Dress not showing correctly in the human tool tip menu
+
+v1.3.2 (Patch 2) - Feb 17 2025
+-Rebalance BH prices for various items
+-Fixed broken Saw animation
+-Fixed a bug which the US Special Forces Block II would disappear while taking the suppressor off
+-Corrected AP values on various ammos
+-Replaced the Medkit UI icon
+-Standardized all text entities being in localization files
+-Added Mirror Wand to CAG's ISA
+-Rangers HQ And Team Leaders troops have their own distinct voice
+
+v1.3.1 (Patch 1) - Feb 12 2025
+-Adjusted and corrected various localization texts
+-Corrected the mod image for the steam workshop
+-Corrected the Mk18 RAPTR stock length
+-CAG and SF have the Transition skill automatically enabled
+
+v1.3.0 - Feb 10 2025
+-Added a 24th STS PJ operative to CAG's enables section
+-Merged the Ares mods together for the steam workshop version (No longer separate modules now)
+-Changed the Rangers default UCP camo with MC AC instead
+-Replaced the Vortex 1-6 scope with the new Tango9 scope for US Special Forces URG-I's
+-CAG's ISA operatives now have access to NVGs
+-US Special Forces operatives can now put the LPVO Vortex 10 scopes on their M110 rifles
+-Replaced the Ranger's 10.3" URG-I with the 11.5" version
+-Replaced the old insurgency sandstorm voice lines with the new vanilla ones
+-Added the M17 to the Rangers
+-Added the M1911A1 to US Special Forces
+-Added the Mk18 RAPTR to Ranger's JTAC
+-Added the LVAW, CSAW and HK416D14 to CAG's 24th STS
+-Added the MP7 to CAG's ISA operatives
+-Added bolt cutters to all Ares units
+-Added the legacy fast ballistic helmet to CAG
+-Added the RPG Backpack to the Commandos grenadiers
+-Added the Modernized CVC to CAG
+-Added new names to the name pool of all Ares units
+-Added custom desktop wallpapers (You can find them in the _EXTRAS folder in the root of the mod)
+-Added build-in IGCS compatibility (The separate IGCS compatibility module is no longer needed)
+-Adjusted FOV for all Ares Units
+-Adjusted deploy costs for Rangers and CAG
+-Adjusted various Attack Types
+-Adjusted and corrected various models and textures
+-Adjusted and corrected various localization texts
+-Adjusted various star item costs to be battle honors costs instead
+-Adjusted sounds on various items
+-Adjusted show order for various items
+-Fixed CAG's CSAW icon
+-Fixed ISA's Cap texture not showing up
+-Fixed incorrect mag size for the Ranger's MK27 MOD2
+-Removed grenades from ISA operatives
+-Removed the Medkit from CAG's Pointman
+-Under the hood XML changes and clean up
+
+v1.2.1 (Hotfix) - 25 Mar 2024
+-Fixed a typo on the Rangers deploy screen
+-Fixed other localization issues
+-Fixed the FTHS helmet models
+-Fixed the double binds for caps for "Cag6"
+
+v1.2.0 - 24 Mar 2024
+-Added SR-25K to CAG
+-Added CSAW to CAG
+-Added new baseball cap textures to CAG and SF (each trooper will have their own cap)
+-Added new animations
+-Fixed various bugs
+-Adjusted unit deploy screens
+-Reverted the crowbar change
+-Corrected/Adjusted several localization texts
+-Adjusted CAG helmet setups and textures
+-Adjusted sound levels on various weapons
+-Added AR-M1 rifles to all Commandos Units
+-Removed AP ammo from the AMD-65M
+
+v1.1.0 - 17 Jan 2024
+-Fixed various major bugs
+-Fixed various oversights
+-Added Crye G4 uniform to the 24th STS JTAC attached to CAG
+-Added Videos on various items
+-Additional Uniforms: Added "Support Gear Selector" support
+-Adjusted cost prices on various items
+-Adjusted models and textures on various items
+-Adjusted animations on various items
+-Removed manufacturer/brand names on localization
+
+v1.0.0 - 21 Dec 2023
+-Switched to a modified semantic versioning system
+-Added SFOD-D Delta unit
+-Added Mk.17L to Ranger Automatic Riflemen
+-Added Desert Lizard camo pattern to Nowheraki Commando Brigade
+-New visualeffects for the M107
+-New mod image
+-New Unit Banner
+-US Special Forces M24 now has cyclic reload
+-Lightened the Commandos folder, moving all shared assets to ARES Core instead
+-Corrected several localization errors
+-Adjusted vest and helmet costs for both Rangers and US Special Forces
+-Removed stroboscopic lights from helmets. Please, update your Ares Core.
+
+--Beta Builds Logs--
+v0.4.0.1b - 10 Nov 2023
+-Added missing voice lines
+-Replaced BM Pistol icon
+
+v0.4.0.1 - 15 Sep 2023
+-Updated for v0.36 compatibility
+-Added custom voice lines
+-Overhaul of helmet models
+-Added Camo Net helmet option for Rangers
+-Added PVS-15 (dual tube) option for Nowheraki Commandos
+-Replaced ANVIS-9 goggles with PVS-15s for all forces
+-Revised NVG models. Now they are rendered and folded up when worn in daytime. When no NVG is selected, a bare mount arm will be, depending on the selected helmet.
+
+v0.3.0.3-BETA - 27 Jul 2023
+-Moved MK17 5.56 to grenadiers and changed their attack type to be semi auto.
+-Changes to plate carriers to avoid clipping and gaps with recoilless rifles and breaching shotguns.
+-Commando team leaders and grenadiers are now the only RPG-26 users.
+-Removed WIP mod image left in by accident.
+
+v0.3.0.2-BETA - 27 Jul 2023
+-Minor fixes and additions.
+
+v0.3.0.1-BETA - 17 Jul 2023
+Added the Nowheraki Commando Brigade unit.
+
+WARNING!
+The RPG-7 Launcher isn't stable, it might cause sudden crashes and disappearence of uniforms! If you experiment these problems, please, go to the FORUM section of this very same mod and EXPLAIN in ALL DETAILS the circunstances of your crash: version used, mod list (with screenshot if possible), active mods at the moment of the bug, actions performed when the problem happened (firing the rpg, reloading, on start, before finishing the map loading...) This is important for us to figure out what is causing the problem, as half of the team was experimenting problems, while the other half didn't have absolutely any.
+
+v0.2.0.4 - 14 May 2023
+-Fixed M110 suppressed missing FX
+
+v0.2.0.3 - 13 May 2023
+-Fixed entities issue
+
+v0.2.0.2 - 10 May 2023
+-Compatibility with new game update.
+-Known issue: If Camo selector is not usable, please wait for Anthony to update his mod.
+
+v0.2 - 03 May 2023
+-Changed unit name to US ARMY RANGERS so name fits the squad creation menu.
+-Added mortar and CAS.
+-Added new old school uniforms like ACU and DCU.
+-Added separate heads for diversity.
+-Added ANVIS-9 NVG.
+-Reworked weapon audio.
+-Removed colored IOV smoke grenades to make the mod lighter.
+-Renamed some M4s to be more consistent with the rest of the mod.
+-Changed some weapon appearances, they're now modular parts.
+-Changed name of MK17 Suppressed to MK17 STD Suppressed.
+-Changed daytime NVGs to display only mounts.
+-Changed various class icons.
+-Changed plate carrier configs.
+-Changed holsters to be bound to sidearms, not body armor.
+-Changed TA31 is now black instead of FDE.
+-Changed AC pants knee-pads to G2 instead of G3.
+-Removed sidearm from most classes for authenticity and greater infantry feel
+ compared to future high speed factions.
+ leaving HQ and team leaders the only ones with access.
+-Fixed G3 stretch panel color issue and gave knee-pads the correct color.
+-Fixed typo in MK18 description.
+-Fixed cubebody compatibility issues. Custom cubebody added to main entities.xml.
+ M320 won't be stuck in the ground.
+-Fixed M320 localization.
+-Fixed missing URG-I in Rifleman 2s inventory.

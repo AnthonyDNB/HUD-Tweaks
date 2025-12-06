@@ -1,0 +1,33 @@
+[img] https://raw.githubusercontent.com/AnthonyDNB/SteamWorkshopImages/refs/heads/main/HUDTweaks/mod_image1.png [/img]
+
+A visual QoL mod that tweaks and alters certain HUD elements within the game, improving them and giving them a better look and feel about them.
+
+[h1]Features[/h1]
+[list]
+    [*]Retouched Human Gear Tool Tip Screen
+    [*]Retouched Briefing Screen
+    [*]Clean Replays
+    [*]Reset Plan Button in Playing Mode
+[/list]
+
+[h3]Retouched Human Gear Tool Tip Screen:[/h3]
+The feature that started this mod in the first place, with general dislike of how the vanilla one look, i have decided to edit it to my liking
+
+[h3]Retouched Briefing Screen:[/h3]
+An best of both worlds, extended the briefing screen like how it was pre v1.0 but now with the latest update list support
+
+(big briefings will show a list, small briefings will not)
+
+[h3]Clean Replays:[/h3]
+The Show HUD Button in replays will completely disappear (unless hovered on) now, enabling for clean replays to be recorded with the conjunction of cinematic mode being on
+
+[h3]Reset Plan button in Playing Mode:[/h3]
+Ever wanna reset your full plan without restarting the mission? Great now you can, the Reset Plan button will display in Playing Mode now
+
+[h1]Compatibility[/h1]
+﻿Due to how this mod replaces the hud.xml file with no other way around it, this mod won't be compatible with any other mods that also replaces this file
+
+[h1]Extra Info[/h1]
+If you have any suggestions or issues feel free to post me a msg here or @me on discord: anthony_dnb
+
+Official Door Kickers 2 Discord: https://discord.gg/doorkickers

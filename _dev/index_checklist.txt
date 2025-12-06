@@ -1,0 +1,14 @@
+Index checklist template of updating this mod for any future game updates that changes GUI files
+
+Hud.xml
+
+HUDT_Reset_Button_while_playing - Reset Plan button in Playing Mode:
+HUDT_hide_hud_button_in_replay - Clean Replays
+HUD_Human_Tooltip - Retouched Human Gear Tool Tip Screen
+#TeamColorMarker - N/A
+HUD_Troop_Profiles - N/A
+#ScenarioInfo - Retouched Briefing Screen
+
+Replays.xml
+
+N/A

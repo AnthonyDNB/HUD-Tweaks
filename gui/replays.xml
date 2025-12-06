@@ -49,11 +49,11 @@
 	</StaticImage>
 	-->
 
-	<!-- 
-		Note/Warning1: all named elements here must also be found in the coop.xml buttontemplate 
-		Note/Warning2: all named elements here must also be found in the coop.xml #Menu_Endscreen_Detailed_ViewReplay 
+	<!--
+		Note/Warning1: all named elements here must also be found in the coop.xml buttontemplate
+		Note/Warning2: all named elements here must also be found in the coop.xml #Menu_Endscreen_Detailed_ViewReplay
 	-->
-	
+
 	<Button name="#Replays_ButtonTemplate" hidden="true">
 		<RenderObject2D texture="data/textures/gui/missions/mission_bg.tga" color="ffffffc8"/>
 		<OnHover>
@@ -168,10 +168,10 @@
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="256" sizeY="30" color="322c1e"/>
 			<StaticText name="#ReplayDate" origin="5 0" align="l" text="01/12/2021" font="paragraph_3" textColor="f0e3cc"/>
 		</StaticImage>
-		
+
 		<StaticImage origin="-42 134" align="rb">
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="80" sizeY="30" color="322c1e"/>
-			<StaticText name="#ReplayTime" origin="0 0" align="c" text="HH:MM:SS" font="paragraph_3" textColor="f0e3cc"/>			
+			<StaticText name="#ReplayTime" origin="0 0" align="c" text="HH:MM:SS" font="paragraph_3" textColor="f0e3cc"/>
 		</StaticImage>
 
 		<StaticImage name="#ReplayIncompatible" origin="0 50" hidden="true" ignoreFocus="true">
@@ -179,7 +179,7 @@
 		</StaticImage>
 		<StaticImage name="#ReplayIncompatibleMods" origin="0 50" hidden="true" ignoreFocus="true">
 			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" color="ff5a5a7f"/>
-		</StaticImage>		
+		</StaticImage>
 		<StaticImage name="#ReplayBackcompatible" align="tr" origin="-50 -35" hidden="true" ignoreFocus="true">
 			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" scaleX="0.5" scaleY="0.5"/>
 		</StaticImage>
